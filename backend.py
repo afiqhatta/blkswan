@@ -181,10 +181,6 @@ def pull_search(url, info):
         print('No specified data type')
 
 
-def get_sub_urls():
-    pass
-
-
 def get_data(pages, topic, info):
     urls = generate_urls(pages, topic)
     return [item for sublist in ThreadPool(pages).starmap(pull_search, zip(urls, repeat(info))) for item in sublist]
