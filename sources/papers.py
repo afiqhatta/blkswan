@@ -7,6 +7,18 @@ HOME_PAGES = {
     'MALAY_MAIL': 'https://www.malaymail.com/'
 }
 
+HOME_TAGS = {
+    'THE_STAR': {
+        'main_headline': {'span': '', 'class': ''},
+        'sub_headlines': {'span': '', 'class': ''}
+    },
+    'THE_SUN': {},
+    'THE_NST': {},
+    'THE EDGE': {},
+    'M_KINI': {},
+    'MALAY_MAIL': {}
+}
+
 SEARCH_URLS = {
     'THE_STAR': ['https://www.thestar.com.my/search/?q=',
                  'topic',
@@ -26,13 +38,22 @@ SEARCH_URLS = {
     'MALAY_MAIL': 'https://www.malaymail.com/'
 }
 
-TEXT_TAGS = {
+ELEMENTS = {
     'THE_STAR': {
-        'body': {'span': 'div', 'class': 'story'},
-        'urls': {'span': 'h2', 'class': 'f18'}
+        'body': {'span': 'div', 'class': 'story'},  # body of news in a news page
+        'urls': {'span': 'h2', 'class': 'f18'},  # urls in search pages, write general structures
+        'summary': {'span': 'div', 'class': 'row list-listing'}
+
     },
     'THE_SUN': {
         'body': {'span': '', 'urls': ''},
-        'urls': {'span': '', 'urls': ''}
-    }
+        'urls': {'span': '', 'urls': ''},
+        'summary': {'span': 'div', 'class': 'row list-listing'},
+    },
+    'THE_NST': {
+            'body': {'span': '', 'urls': ''},
+            'urls': {'span': '', 'urls': ''},
+            'summary': {'span': 'div', 'class': 'row list-listing'},
+        },
+
 }
